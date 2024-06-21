@@ -1,2 +1,2 @@
 # Learn-JS
-Javascript code and notes.
+Javascript code and notes
