@@ -18,13 +18,13 @@ const values = [1,2,3,[4,5,6],7,8,[9,10,[11,12,13]]];
 const realValues = values.flat(Infinity);           // returns single array, take depth as argument
 console.log(realValues);
 
-console.log(Array.isArray("Shubham"));
-console.log(Array.isArray([1,2,3,4]));
+console.log(Array.isArray("Shubham"));              // false
+console.log(Array.isArray([1,2,3,4]));              // true
 
-console.log(Array.from("Shubham"));
+console.log(Array.from("Shubham"));                 // creates an array with each character
 console.log(Array.from({name: "Shubham"}));      // bydefault returns empty object, for object input
 
 let num1 = 100;
 let num2 = 200;
 let num3 = 300;
-console.log(Array.of(num1,num2,num3));
+console.log(Array.of(num1,num2,num3));          // creates an array with given elements
