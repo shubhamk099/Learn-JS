@@ -1,1 +1,1 @@
-JavaScript Code and Notes (ChaiWithCode
+JavaScript Code and Notes (ChaiWithCode)
