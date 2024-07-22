@@ -8,8 +8,7 @@
 // Arrays, Object, Functions
 
 // JavaScript is a dynamically typed language
-
-
+// Which means we don't need to specify types
 const score = 100;
 const scoreValue = 100.4;
 
@@ -47,3 +46,4 @@ console.log(typeof null);                    // object
 console.log(typeof undefined);               // undefined
 
 
+// arrays are special type of object in JS
