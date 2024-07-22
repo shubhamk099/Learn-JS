@@ -7,7 +7,7 @@ console.log(2 == 1);
 console.log(2 != 1);
 
 /*
-The == operator in JavaScript performs type coercion, meaning it converts the values to a common type before making the comparison.
+The operators in JavaScript performs type coercion, meaning it converts the values to a common type before making the comparison.
 */
 // string converted into number
 console.log("2" > 1);
