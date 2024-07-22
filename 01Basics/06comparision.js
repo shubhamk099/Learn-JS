@@ -11,7 +11,8 @@ console.log("2" > 1);
 console.log("02" < 1);
 
 // In, JavaScript == and <,> operations are performed differently
-// In, <, > null is converted into 0
+// For <,> and <=, >= comparisons 'null' is converted to 0;
+// For == comparison 'null' is not converted to 0, and is loosely equal to 'undefined'
 console.log(null > 0);
 console.log(null == 0);
 console.log(null >= 0);
