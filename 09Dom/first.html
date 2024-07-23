@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black"></body>
+
+  <script>
+    const ourDiv = document.createElement('div');
+    console.log(ourDiv);
+    ourDiv.className = 'main';
+    ourDiv.id = Math.round(Math.random()*10+1);
+    ourDiv.setAttribute('title','generated title');
+    ourDiv.style.backgroundColor = 'green';
+    ourDiv.style.padding = '15px';
+    // Till now, this div is still in memory, not in page
+    //ourDiv.innerText = 'Chai aur Code';        // This overwrites, so expensive
+
+    const addedText = document.createTextNode("Chai aur Code");
+    ourDiv.append(addedText);
+
+    document.body.appendChild(ourDiv);
+
+  </script>
+</html>
