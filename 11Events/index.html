@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+      <li>
+        <img
+          width="400px"
+          id="canary"
+          src="https://images.unsplash.com/photo-1666936962717-950e6828a87d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Canary"
+        />
+      </li>
+      <li>
+        <img
+          width="400px"
+          id="lake"
+          src="https://images.unsplash.com/photo-1697898712236-e8400e0ea235?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="City Lake"
+        />
+      </li>
+      <li>
+        <img
+          width="400px"
+          id="diwali"
+          src="https://images.unsplash.com/photo-1666671743492-1ffcf057943d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Diwali"
+        />
+      </li>
+      <li>
+        <img
+          height="287px"
+          id="flowers"
+          src="https://images.unsplash.com/photo-1712507949178-d665211eafee?q=80&w=2009&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Flowers"
+        />
+      </li>
+      <li>
+        <img
+          height="269px"
+          id="leaf"
+          src="https://images.unsplash.com/photo-1713325275384-c337d1ed67e6?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Leaf"
+        />
+      </li>
+      <li>
+        <a style="color: aliceblue" href="http://google.com" id="google"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+    // writing onclick directly in html elements is not recommended
+
+    // This method is also not recommended
+    // document.getElementById("flowers").onclick = function () {
+    //   alert("flowers clicked");
+    // };
+
+    document.getElementById("flowers").addEventListener(
+      "click",
+      function (e) {
+        alert("You Touched My Flowers!");
+      },
+      false
+    );
+
+    // attachEvent() -- earlier used for internet explorer
+    // jQuery - on   -- earlier used in JQuery
+
+    // Learn more about these topics :
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+    // true, false is for event propagation  ( event bubbling-false), (event capturing-true)
+    // by default (false), events propagate from inside to outside elements,
+    // but if we want to alter this behaviour, we can use (true)
+    
+    document.getElementById("images").addEventListener(
+      "click",
+      function (e) {
+        console.log("Clicked inside ul");
+      },
+      true
+    );
+
+    document.getElementById("diwali").addEventListener(
+      "click",
+      function (e) {
+        console.log("Clicked on diwali image");
+        e.stopPropagation();      // stop event propagation
+      },
+      false
+    );
+
+    document.getElementById("google").addEventListener(
+      "click",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("Clicked on google");
+      },
+      false
+    );    
+
+  </script>
+</html>

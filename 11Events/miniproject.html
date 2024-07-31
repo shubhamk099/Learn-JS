@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <ul id="images">
+      <li>
+        <img
+          width="400px"
+          id="canary"
+          src="https://images.unsplash.com/photo-1666936962717-950e6828a87d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Canary"
+        />
+      </li>
+      <li>
+        <img
+          width="400px"
+          id="lake"
+          src="https://images.unsplash.com/photo-1697898712236-e8400e0ea235?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="City Lake"
+        />
+      </li>
+      <li>
+        <img
+          width="400px"
+          id="diwali"
+          src="https://images.unsplash.com/photo-1666671743492-1ffcf057943d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Diwali"
+        />
+      </li>
+      <li>
+        <img
+          height="287px"
+          id="flowers"
+          src="https://images.unsplash.com/photo-1712507949178-d665211eafee?q=80&w=2009&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Flowers"
+        />
+      </li>
+      <li>
+        <img
+          height="269px"
+          id="leaf"
+          src="https://images.unsplash.com/photo-1713325275384-c337d1ed67e6?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Leaf"
+        />
+      </li>
+      <li>
+        <a style="color: aliceblue" href="http://google.com" id="google"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+    document.querySelector("#images").addEventListener("click",function(e){
+        let removeIt = e.target.parentNode;
+        if(e.target.tagName == "IMG"){
+            console.log(e.target.tagName);
+            removeIt.remove();
+        }
+        //removeIt.parentNode.removeChild(removeIt);
+    });
+  </script>
+</html>
