@@ -81,7 +81,8 @@
     // altKey, ctrlKey, shiftKey, keyCode
 
     // true, false is for event propagation  ( event bubbling-false), (event capturing-true)
-    // by default (false), events propagate from inside to outside elements,
+    // In a cycle - first event-capturing then event-bubbling
+    // by default (false), events propagate from inside to outside elements. ie event bubbling,
     // but if we want to alter this behaviour, we can use (true)
     
     document.getElementById("images").addEventListener(
